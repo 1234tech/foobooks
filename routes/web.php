@@ -12,9 +12,20 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return 'This is the index...';
+    //return view('welcome');
+    return view('xyz');
 });
 
+Route::get('/abc', function () {
+    return 'This is the abc route...';
+    //return view('welcome');
+});
+
+
+/*
 Route::get('/example', function () {
     return view('abc');
 });
+
+*/
