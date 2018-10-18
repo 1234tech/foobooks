@@ -11,11 +11,61 @@
 |
 */
 
+Route::get('/', 'WelcomeController');
+
+Route::get('/books', 'BookController@index');
+
+Route::get('/books/{title}', 'BookController@show');
+
+
+
+// OLD CODE FROM COURSE VIDEOS - week 6
+
+/*
+
+Route::get('/abc', function() {
+    return App::environment();
+});
+
 Route::get('/', function () {
     //return 'This is the index...';
-    //return view('welcome');
-    return view('xyz');
+    return view('welcome');
+    //return view('xyz');
 });
+
+Route::get('/books/{category}/{title}', function($category, $title) {
+    return 'You are viewing the book: '.$title.' in the category '.$category;
+});
+
+Route::get('/books/{title}', function($title = null) {
+    return 'You are viewing the book: ' . $title;
+});
+
+Route::get('/books', function() {
+    return 'Here are all the books...';
+});
+
+
+Route::get('/books/{title?}', function($title = null) {
+
+
+    if($title == null) {
+        return 'You did not specify a title';
+    }
+    else {
+        return 'You are viewing the book: ' . $title;
+    }
+});
+
+
+
+
+Route::get('/books/{abc}/{xyz}', function($x, $y) {
+    return 'You are viewing the book: '.$x.' in the category '.$y;
+});
+
+
+
 
 Route::get('/abc', function () {
     return 'This is the abc route...';
@@ -23,7 +73,7 @@ Route::get('/abc', function () {
 });
 
 
-/*
+
 Route::get('/example', function () {
     return view('abc');
 });
