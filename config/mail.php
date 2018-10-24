@@ -2,6 +2,9 @@
 
 return [
 
+        'supportEmail' => 'stacyschermann@g.harvard.edu',
+
+
     /*
     |--------------------------------------------------------------------------
     | Mail Driver
